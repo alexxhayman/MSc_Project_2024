@@ -1,6 +1,10 @@
 # MSc_Project_2024
 Optimising Bicycle Selection: Machine Learning Approaches to Frame Geometry Analysis
 
+Very Important: 
+1. The scripts contained in this repository are .pynb file as the project was developed using Jupyter Notebooks.
+2. I am not sure if the visualisations will run in another another IDE like VS Code but I have still chosen to include them. 
+
 Instructions on how to use python scripts:
 
 1. The primary file required is 'all_road_bikes_2020-2024.json'
