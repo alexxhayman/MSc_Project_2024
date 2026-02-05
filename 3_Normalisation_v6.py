@@ -232,7 +232,7 @@ def impute_missing_values_median(csv_file_path):
     # Impute missing values using the median for each column
     for column in data_to_impute.columns:
         median_value = data_to_impute[column].median()
-        data_to_impute[column].fillna(median_value, inplace=True)
+        data_to_impute[column] = data_to_impute[column].fillna(median_value)
     
     # Reattach the excluded columns to the dataframe
     for col in exclude_columns:
@@ -363,7 +363,7 @@ for column in columns_to_normalize:
     
 # Ratios
 bikes_data['SRR'] = bikes_data['geometry.source.stackMM'] / bikes_data['geometry.source.reachMM']
-bikes_data['AI'] = (bikes_data['geometry.source.reachMM'] * np.tan(np.radians(bikes_data['geometry.source.headTubeAngle_radians']))) / bikes_data['geometry.source.wheelbaseMM']
+bikes_data['AI'] = (bikes_data['geometry.source.reachMM'] * np.tan(bikes_data['geometry.source.headTubeAngle_radians'])) / bikes_data['geometry.source.wheelbaseMM']
 bikes_data['CS/BBD'] = bikes_data['geometry.source.chainstayLengthMM'] / bikes_data['geometry.source.bottomBracketDropMM']
 bikes_data['ETT/S'] = bikes_data['geometry.source.topTubeLengthMM'] / bikes_data['geometry.source.stackMM']
 

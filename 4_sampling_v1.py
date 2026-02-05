@@ -12,7 +12,7 @@ def sample_rows(input_file, output_file, num_samples=20):
     df = pd.read_csv(input_file)
     
     # Sample num_samples rows from the dataframe at random
-    sampled_df = df.sample(n=num_samples, random_state=random.seed(42))
+    sampled_df = df.sample(n=num_samples, random_state=42)
     
     # Save the sampled rows to a new CSV file
     sampled_df.to_csv(output_file, index=False)
